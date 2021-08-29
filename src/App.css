@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+.app {
+    max-width: 1168px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h2, span {
+    color: #fff;
+}
+.list-check {
+    margin-top: 10px;
+    outline: none;
+    border: none;
+}
+.list-check, option {
+    padding: 5px;
+}
+.add-task {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-task, .btn-task {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-task {
+    color: #fff;
+    background-color: crimson;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.task-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+    max-width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-list-item {
+    background-color: rgba(149, 154, 153, 0.3);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    transition: 1s all;
+}
+
+.btn-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+}
+.task-label, .active {
+    color: #ffffff;
+
+}
+.active {
+    text-decoration: line-through;
+}
+.btn-delete  {
+    margin: 0;
+    cursor: pointer;
+    padding: 3px;
+    color: #ffffff;
+    background-color: crimson;
+}
+.fa .fa-trash-o {
+    opacity: 0;
+    transition: 1s all;
+    color: crimson;
+}
+
+.fa .fa-trash-o.active {
+    opacity: 1;
 }
